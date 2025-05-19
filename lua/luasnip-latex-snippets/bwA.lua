@@ -26,6 +26,8 @@ function M.retrieve(not_math)
     ),
 
     parse_snippet({ trig = "beg", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
+    parse_snippet({ trig = "itemi", name = "Itemize" }, "\\begin{itemize}\n\t\\item $0\n\\end{itemize}"),
+    parse_snippet({ trig = "enum", name = "Enumerate" }, "\\begin{enumerate}\n\t\\item $0\n\\end{enumerate}"),
 
     s({ trig = "bigfun", name = "Big function" }, {
       t({ "\\begin{align*}", "\t" }),
