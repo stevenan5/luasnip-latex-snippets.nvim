@@ -218,7 +218,6 @@ function M.retrieve(is_math)
       { trig = "dint", name = "integral", priority = 300 },
       "\\int_{${1:-\\infty}}^{${2:\\infty}} ${3:${TM_SELECTED_TEXT}} $0"
     ),
-    parse_snippet({ trig = "E", name = "Exp. Val." }, "\\mathbb{E} "),
 
     parse_snippet({ trig = "==", name = "equals" }, [[&= $1 \\\\]]),
     parse_snippet({ trig = "neq", name = "not equals" }, "\\neq "),
@@ -236,8 +235,8 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "~~", name = "~" }, "\\sim "),
     parse_snippet({ trig = "conj", name = "conjugate" }, "\\overline{$1}$0"),
 
-    parse_snippet({ trig = "dkl", name = "KL Div" }, "D_{KL}\left($1 || $2) $0"),
-    parse_snippet({ trig = "pr", name = "Prob" }, "Pr\left($1) $0"),
+    parse_snippet({ trig = "dkl", name = "KL Div" }, "D_{KL}\\left($1 || $2\\right) $0"),
+    parse_snippet({ trig = "pr", name = "Prob" }, "Pr\\left($1) $0"\\right),
   }
 end
 
