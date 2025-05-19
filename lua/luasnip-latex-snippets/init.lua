@@ -79,8 +79,10 @@ M.setup_tex = function(is_math, not_math)
   })
 
   local math_i = require("luasnip-latex-snippets/math_i").retrieve(is_math)
+  local i = require("luasnip-latex-snippets/i").retrieve(not_math)
 
   ls.add_snippets("tex", math_i, { default_priority = 0 })
+  ls.add_snippets("tex", i, { default_priority = 0 })
 
   ls.add_snippets("tex", _autosnippets(is_math, not_math), {
     type = "autosnippets",
@@ -98,6 +100,8 @@ M.setup_markdown = function()
 
   local math_i = require("luasnip-latex-snippets/math_i").retrieve(is_math)
   ls.add_snippets("markdown", math_i, { default_priority = 0 })
+  local i = require("luasnip-latex-snippets/i").retrieve(is_math)
+  ls.add_snippets("markdown", i, { default_priority = 0 })
 
   local autosnippets = _autosnippets(is_math, not_math)
   local trigger_of_snip = function(s)
