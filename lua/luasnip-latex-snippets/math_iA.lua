@@ -18,6 +18,42 @@ function M.retrieve(is_math)
   return {
     s(
       {
+        trig = "(%a+)tt",
+        wordTrig = false,
+        regTrig = true,
+        name = "text",
+        priority = 100,
+      },
+      f(function(_, snip)
+        return string.format("\\text{%s}", snip.captures[1])
+      end, {})
+    ),
+    s(
+      {
+        trig = "(%a+)ita",
+        wordTrig = false,
+        regTrig = true,
+        name = "italic",
+        priority = 100,
+      },
+      f(function(_, snip)
+        return string.format("\\textit{%s}", snip.captures[1])
+      end, {})
+    ),
+    s(
+      {
+        trig = "(%a+)bol",
+        wordTrig = false,
+        regTrig = true,
+        name = "bold",
+        priority = 100,
+      },
+      f(function(_, snip)
+        return string.format("\\textbf{%s}", snip.captures[1])
+      end, {})
+    ),
+    s(
+      {
         trig = "(%a+)vec",
         wordTrig = false,
         regTrig = true,
