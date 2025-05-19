@@ -161,6 +161,9 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
+    parse_snippet({ trig = "vdo", name = "vdots", priority = 100 }, "\\vdots "),
+    parse_snippet({ trig = "cdo", name = "cdots", priority = 100 }, "\\cdots "),
+    parse_snippet({ trig = "ddo", name = "ddots", priority = 100 }, "\\ddots "),
     parse_snippet({ trig = "!>", name = "mapsto" }, "\\mapsto "),
     parse_snippet({ trig = "iff", name = "iff" }, "\\iff"),
     parse_snippet({ trig = "siff", name = "short iff", priority = 100}, "\\Leftrightarrow"),
