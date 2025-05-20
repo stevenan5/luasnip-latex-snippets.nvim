@@ -208,7 +208,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "QQ", name = "Q" }, "\\mathbb{Q}"),
     parse_snippet({ trig = "ZZ", name = "Z" }, "\\mathbb{Z}"),
     parse_snippet({ trig = "XX", name = "X" }, "\\mathcal{X}"),
-    parse_snippet({ trig = "Y", name = "Y" }, "\\mathcal{Y}"),
+    parse_snippet({ trig = "YY", name = "Y" }, "\\mathcal{Y}"),
     parse_snippet({ trig = "UU", name = "cup" }, "\\cup "),
     parse_snippet({ trig = "NN", name = "n" }, "\\mathbb{N}"),
     parse_snippet({ trig = "||", name = "mid" }, " \\mid "),
