@@ -138,10 +138,10 @@ function M.retrieve(is_math)
       end, {})
     ),
 
-    parse_snippet({ trig = "dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = " dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
-    parse_snippet({ trig = "td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
+    parse_snippet({ trig = "dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = " td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
+    parse_snippet({ trig = "td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
     parse_snippet({ trig = "cb", name = "Cube ^3" }, "^3 "),
     parse_snippet({ trig = "sr", name = "Square ^2" }, "^2"),
 
@@ -228,8 +228,8 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "==", name = "equals" }, [[&= $1 \\\\]]),
     parse_snippet({ trig = "neq", name = "not equals" }, "\\neq "),
     parse_snippet({ trig = "compl", name = "complement" }, "^{c}"),
-    parse_snippet({ trig = "ss", name = "subscript" }, "_{$1}$0"),
     parse_snippet({ trig = " ss", name = "subscript" }, "_{$1}$0"),
+    parse_snippet({ trig = "ss", name = "subscript" }, "_{$1}$0"),
     parse_snippet({ trig = "=>", name = "implies" }, "\\implies"),
     parse_snippet({ trig = "simp", name = "short implies" }, "\\Rightarrow"),
     parse_snippet({ trig = "=<", name = "implied by" }, "\\impliedby"),
