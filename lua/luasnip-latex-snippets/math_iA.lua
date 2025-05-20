@@ -139,7 +139,9 @@ function M.retrieve(is_math)
     ),
 
     parse_snippet({ trig = "dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
+    parse_snippet({ trig = " dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = "td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
+    parse_snippet({ trig = " td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
     parse_snippet({ trig = "cb", name = "Cube ^3" }, "^3 "),
     parse_snippet({ trig = "sr", name = "Square ^2" }, "^2"),
 
@@ -161,9 +163,9 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
-    parse_snippet({ trig = "vdo", name = "vdots", priority = 100 }, "\\vdots "),
-    parse_snippet({ trig = "cdo", name = "cdots", priority = 100 }, "\\cdots "),
-    parse_snippet({ trig = "ddo", name = "ddots", priority = 100 }, "\\ddots "),
+    parse_snippet({ trig = "v..", name = "vdots", priority = 100 }, "\\vdots "),
+    parse_snippet({ trig = "c..", name = "cdots", priority = 100 }, "\\cdots "),
+    parse_snippet({ trig = "d..", name = "ddots", priority = 100 }, "\\ddots "),
     parse_snippet({ trig = "!>", name = "mapsto" }, "\\mapsto "),
     parse_snippet({ trig = "iff", name = "iff" }, "\\iff"),
     parse_snippet({ trig = "siff", name = "short iff", priority = 100}, "\\Leftrightarrow"),
@@ -227,6 +229,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "neq", name = "not equals" }, "\\neq "),
     parse_snippet({ trig = "compl", name = "complement" }, "^{c}"),
     parse_snippet({ trig = "ss", name = "subscript" }, "_{$1}$0"),
+    parse_snippet({ trig = " ss", name = "subscript" }, "_{$1}$0"),
     parse_snippet({ trig = "=>", name = "implies" }, "\\implies"),
     parse_snippet({ trig = "simp", name = "short implies" }, "\\Rightarrow"),
     parse_snippet({ trig = "=<", name = "implied by" }, "\\impliedby"),
