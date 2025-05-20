@@ -66,10 +66,10 @@ end
 M.setup_tex = function(is_math, not_math)
   local ls = require("luasnip")
   ls.add_snippets("tex", {
-    ls.parser.parse_snippet(
-      { trig = "pac", name = "Package" },
-      "\\usepackage[${1:options}]{${2:package}}$0"
-    ),
+    -- ls.parser.parse_snippet(
+    --   { trig = "pac", name = "Package" },
+    --   "\\usepackage[${1:options}]{${2:package}}$0"
+    -- ),
 
     -- ls.parser.parse_snippet({ trig = "nn", name = "Tikz node" }, {
     --   "$0",
