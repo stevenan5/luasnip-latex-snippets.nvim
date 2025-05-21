@@ -138,6 +138,7 @@ function M.retrieve(is_math)
       end, {})
     ),
 
+    parse_snippet({ trig = "prlr", name = "Prob \left( \right)" }, "Pr\\left($1\\right) $0"),
     parse_snippet(
       { trig = "plr", name = "left| right|" },
       "\\left| ${1:${TM_SELECTED_TEXT}} \\right| $0"
@@ -264,7 +265,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "conj", name = "conjugate" }, "\\overline{$1}$0"),
 
     parse_snippet({ trig = "dkl", name = "KL Div" }, "D_{KL}\\left($1 || $2\\right) $0"),
-    parse_snippet({ trig = "pr", name = "Prob" }, "Pr\\left($1 $0\\right)"),
+    parse_snippet({ trig = "pr", name = "Prob" }, "Pr($1) $0"),
   }
 end
 
