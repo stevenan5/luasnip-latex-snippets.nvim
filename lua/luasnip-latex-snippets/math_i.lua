@@ -23,7 +23,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "limsup", name = "limsup" }, "\\limsup_{${1:n} \\to ${2:\\infty}} "),
 
     parse_snippet(
-      { trig = "prod", name = "product" },
+      { trig = "pd", name = "product" },
       "\\prod_{${1:n=${2:1}}}^{${3:\\infty}} ${4:${TM_SELECTED_TEXT}} $0"
     ),
 
