@@ -18,6 +18,18 @@ function M.retrieve(is_math)
   return {
     s(
       {
+        trig = "(%w+)tilde",
+        wordTrig = false,
+        regTrig = true,
+        name = "tilde",
+        priority = 100,
+      },
+      f(function(_, snip)
+        return string.format("\\tilde{%s}", snip.captures[1])
+      end, {})
+    ),
+    s(
+      {
         trig = "(%w+)tt",
         wordTrig = false,
         regTrig = true,
