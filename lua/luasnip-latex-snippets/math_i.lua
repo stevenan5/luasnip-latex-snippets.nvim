@@ -12,6 +12,9 @@ function M.retrieve(is_math)
   }) --[[@as function]]
 
   return {
+    parse_snippet({ trig = " lab", name = "label" }, "~\\label{${1:${TM_SELECTED_TEXT}}} $0"),
+    parse_snippet({ trig = "lab", name = "label" }, "~\\label{${1:${TM_SELECTED_TEXT}}} $0"),
+    
     parse_snippet({ trig = "sum", name = "sum" }, "\\sum_{${1:i}=${2:1}}^{${3:n}} $0"),
 
     parse_snippet(
