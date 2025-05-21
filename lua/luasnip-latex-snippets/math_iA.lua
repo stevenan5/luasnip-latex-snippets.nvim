@@ -160,6 +160,7 @@ function M.retrieve(is_math)
       "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"
     ),
 
+    parse_snippet({ trig = "pme", name = "\\prime" }, "\\prime"),
     parse_snippet({ trig = " dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = "dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = " td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
