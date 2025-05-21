@@ -18,6 +18,7 @@ function M.retrieve(is_math)
   return {
     parse_snippet({ trig = "top", name = "\\top" }, "\\top"),
     parse_snippet({ trig = "pe", name = "\\prime" }, "\\prime"),
+    parse_snippet({ trig = "pm", name = "+-" }, "\\pm"),
     parse_snippet({ trig = "sq", name = "\\sqrt{}" }, "\\sqrt{${1:${TM_SELECTED_TEXT}}} $0"),
     parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
 
