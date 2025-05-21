@@ -32,7 +32,7 @@ function M.retrieve(is_math)
       "\\frac{\\partial ${1:F}}{\\partial ${2:x}} $0"
     ),
     parse_snippet(
-      { trig = "diff", name = "d/dx" },
+      { trig = "dff", name = "d/dx" },
       "\\frac{d ${1:f}}{d ${2:x}} $0"
     ),
 
