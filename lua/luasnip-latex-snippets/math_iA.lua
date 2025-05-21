@@ -138,6 +138,31 @@ function M.retrieve(is_math)
       end, {})
     ),
 
+    parse_snippet(
+      { trig = "lr(", name = "left( right)" },
+      "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"
+    ),
+    parse_snippet(
+      { trig = "lr|", name = "left| right|" },
+      "\\left| ${1:${TM_SELECTED_TEXT}} \\right| $0"
+    ),
+    parse_snippet(
+      { trig = "lr{", name = "left\\{ right\\}" },
+      "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\} $0"
+    ),
+    parse_snippet(
+      { trig = "lr[", name = "left[ right]" },
+      "\\left[ ${1:${TM_SELECTED_TEXT}} \\right] $0"
+    ),
+    parse_snippet(
+      { trig = "lra", name = "leftangle rightangle" },
+      "\\left< ${1:${TM_SELECTED_TEXT}} \\right>$0"
+    ),
+    -- parse_snippet(
+    --   { trig = "lr", name = "left( right)" },
+    --   "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"
+    -- ),
+
     parse_snippet({ trig = " dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = "dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = " td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
@@ -168,7 +193,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "d..", name = "ddots", priority = 100 }, "\\ddots "),
     parse_snippet({ trig = "!>", name = "mapsto" }, "\\mapsto "),
     parse_snippet({ trig = "iff", name = "iff" }, "\\iff"),
-    parse_snippet({ trig = "siff", name = "short iff", priority = 100}, "\\Leftrightarrow"),
+    parse_snippet({ trig = "siff", name = "short iff", priority = 100 }, "\\Leftrightarrow"),
     parse_snippet({ trig = "ooo", name = "\\infty" }, "\\infty"),
     --parse_snippet({ trig = "rij", name = "mrij" }, "(${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0"),
     parse_snippet({ trig = "nabl", name = "nabla" }, "\\nabla "),
