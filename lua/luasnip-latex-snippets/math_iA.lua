@@ -18,7 +18,7 @@ function M.retrieve(is_math)
   return {
     s(
       {
-        trig = "(%a+)tt",
+        trig = "(%w+)tt",
         wordTrig = false,
         regTrig = true,
         name = "text",
@@ -30,7 +30,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%a+)ita",
+        trig = "(%w+)ita",
         wordTrig = false,
         regTrig = true,
         name = "italic",
@@ -42,7 +42,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%a+)bol",
+        trig = "(%w+)bol",
         wordTrig = false,
         regTrig = true,
         name = "bold",
@@ -54,7 +54,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%a+)vec",
+        trig = "(%w+)vec",
         wordTrig = false,
         regTrig = true,
         name = "vec",
@@ -66,7 +66,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%a+)bar",
+        trig = "(%w+)bar",
         wordTrig = false,
         regTrig = true,
         name = "bar",
@@ -78,7 +78,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%a+)und",
+        trig = "(%w+)und",
         wordTrig = false,
         regTrig = true,
         name = "underline",
@@ -90,7 +90,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%a)dot",
+        trig = "(%w)dot",
         wordTrig = false,
         regTrig = true,
         name = "dot",
@@ -103,19 +103,19 @@ function M.retrieve(is_math)
 
     s(
       {
-        trig = "(%a+)hat",
+        trig = "(%w+)what",
         wordTrig = false,
         regTrig = true,
-        name = "hat",
+        name = "widehat",
         priority = 100,
       },
       f(function(_, snip)
-        return string.format("\\hat{%s}", snip.captures[1])
+        return string.format("\\widehat{%s}", snip.captures[1])
       end, {})
     ),
     s(
       {
-        trig = "(%a+)ora",
+        trig = "(%w+)ora",
         wordTrig = false,
         regTrig = true,
         name = "ora",
@@ -127,7 +127,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%a+)ola",
+        trig = "(%w+)ola",
         wordTrig = false,
         regTrig = true,
         name = "ola",
