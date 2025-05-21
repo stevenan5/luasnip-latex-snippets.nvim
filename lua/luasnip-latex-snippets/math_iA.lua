@@ -139,19 +139,15 @@ function M.retrieve(is_math)
     ),
 
     parse_snippet(
-      { trig = "(lr)", name = "left( right)" },
-      "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"
-    ),
-    parse_snippet(
-      { trig = "|lr", name = "left| right|" },
+      { trig = "plr", name = "left| right|" },
       "\\left| ${1:${TM_SELECTED_TEXT}} \\right| $0"
     ),
     parse_snippet(
-      { trig = "{lr}", name = "left\\{ right\\}" },
+      { trig = "clr", name = "left\\{ right\\}" },
       "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\} $0"
     ),
     parse_snippet(
-      { trig = "[lr]", name = "left[ right]" },
+      { trig = "blr", name = "left[ right]" },
       "\\left[ ${1:${TM_SELECTED_TEXT}} \\right] $0"
     ),
     parse_snippet(
