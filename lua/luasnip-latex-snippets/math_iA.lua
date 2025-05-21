@@ -138,7 +138,7 @@ function M.retrieve(is_math)
       end, {})
     ),
 
-    parse_snippet({ trig = "prlr", name = "Prob \left( \right)" }, "Pr\\left($1\\right) $0"),
+    parse_snippet({ trig = "prlr", name = "Prob \\left( \\right)" }, "Pr\\left($1\\right) $0"),
     parse_snippet(
       { trig = "plr", name = "left| right|" },
       "\\left| ${1:${TM_SELECTED_TEXT}} \\right| $0"
