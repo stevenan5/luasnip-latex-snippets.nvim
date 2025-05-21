@@ -166,6 +166,8 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
     parse_snippet({ trig = "cb", name = "Cube ^3" }, "^3 "),
     parse_snippet({ trig = "sr", name = "Square ^2" }, "^2"),
+    parse_snippet({ trig = " dtr", name = "transpose" }, "^{\\top}$0 "),
+    parse_snippet({ trig = "dtr", name = "transpose" }, "^{\\top}$0 "),
 
     parse_snippet({ trig = "EE", name = "exists" }, "\\exists "),
     parse_snippet({ trig = "AA", name = "forall" }, "\\forall "),
