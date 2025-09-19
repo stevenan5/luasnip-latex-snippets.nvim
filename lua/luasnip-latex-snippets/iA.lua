@@ -6,6 +6,7 @@ local M = {}
 
 function M.retrieve(not_math)
   local parse_snippet = ls.extend_decorator.apply(ls.parser.parse_snippet, {
+    wordTrig = false,
     condition = pipe({ not_math }),
   }) --[[@as function]]
 
