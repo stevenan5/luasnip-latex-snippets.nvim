@@ -176,7 +176,6 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "dd", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = " dp", name = "prime superscript ^{'}" }, "^{\\prime}$0 "),
     parse_snippet({ trig = "dp", name = "prime superscript ^{'}" }, "^{\\prime}$0 "),
-    parse_snippet({ trig = "pme", name = "prime" }, "\\prime $0"),
     parse_snippet({ trig = " td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
     parse_snippet({ trig = "td", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
     parse_snippet({ trig = "cb", name = "Cube ^3" }, "^3 "),
