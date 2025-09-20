@@ -14,8 +14,6 @@ function M.retrieve(is_math)
   return {
     parse_snippet({ trig = " lab", name = "label" }, "~\\label{${1:${TM_SELECTED_TEXT}}} $0"),
     parse_snippet({ trig = "lab", name = "label" }, "~\\label{${1:${TM_SELECTED_TEXT}}} $0"),
-    
-    parse_snippet({ trig = "sum", name = "sum" }, "\\sum_{${1:i}=${2:1}}^{${3:n}} $0"),
 
     parse_snippet(
       { trig = "taylor", name = "taylor" },
@@ -26,18 +24,10 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "limsup", name = "limsup" }, "\\limsup_{${1:n} \\to ${2:\\infty}} "),
 
     parse_snippet(
-      { trig = "pd", name = "product" },
-      "\\prod_{${1:i}=${2:1}}^{${3:n}} $0"
-    ),
-
-    parse_snippet(
       { trig = "part", name = "d/dx" },
       "\\frac{\\partial ${1:F}}{\\partial ${2:x}} $0"
     ),
-    parse_snippet(
-      { trig = "dff", name = "d/dx" },
-      "\\frac{d ${1:f}}{d ${2:x}} $0"
-    ),
+    parse_snippet({ trig = "dff", name = "d/dx" }, "\\frac{d ${1:f}}{d ${2:x}} $0"),
 
     parse_snippet({ trig = "pmat", name = "pmat" }, "\\begin{pmatrix} $1 \\end{pmatrix} $0"),
 

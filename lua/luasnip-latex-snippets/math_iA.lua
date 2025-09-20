@@ -199,6 +199,9 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "cc", name = "subset" }, "\\subset "),
 
+    parse_snippet({ trig = "sum", name = "sum" }, "\\sum_{${1:i}=${2:1}}^{${3:n}} $0"),
+    parse_snippet({ trig = "pd", name = "product" }, "\\prod_{${1:i}=${2:1}}^{${3:n}} $0"),
+
     parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
     parse_snippet({ trig = "v..", name = "vdots", priority = 100 }, "\\vdots "),
