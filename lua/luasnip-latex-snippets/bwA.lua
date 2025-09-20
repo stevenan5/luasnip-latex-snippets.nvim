@@ -26,14 +26,35 @@ function M.retrieve(not_math)
     ),
 
     parse_snippet({ trig = "sec", name = "section" }, "\\section{$1}~\\label{sec:$1}\n$0"),
-    parse_snippet({ trig = "ssec", name = "subsection" }, "\\section{$1}~\\label{subsec:$1}\n$0"),
-    parse_snippet({ trig = "sssec", name = "subsubsection" }, "\\section{$1}~\\label{subsubsec:$1}\n$0"),
-    parse_snippet({ trig = "asec", name = "appendix section" }, "\\section{$1}~\\label{app_sec:$1}\n$0"),
-    parse_snippet({ trig = "assec", name = "appendix subsection" }, "\\section{$1}~\\label{app_subsec:$1}\n$0"),
-    parse_snippet({ trig = "asssec", name = "appendix subsubsection" }, "\\section{$1}~\\label{app_subsubsec:$1}\n$0"),
+    parse_snippet(
+      { trig = "ssec", name = "subsection" },
+      "\\subsection{$1}~\\label{subsec:$1}\n$0"
+    ),
+    parse_snippet(
+      { trig = "sssec", name = "subsubsection" },
+      "\\subsubsection{$1}~\\label{subsubsec:$1}\n$0"
+    ),
+    parse_snippet(
+      { trig = "asec", name = "appendix section" },
+      "\\section{$1}~\\label{app_sec:$1}\n$0"
+    ),
+    parse_snippet(
+      { trig = "assec", name = "appendix subsection" },
+      "\\subsection{$1}~\\label{app_subsec:$1}\n$0"
+    ),
+    parse_snippet(
+      { trig = "asssec", name = "appendix subsubsection" },
+      "\\subsubsection{$1}~\\label{app_subsubsec:$1}\n$0"
+    ),
     parse_snippet({ trig = "beg", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
-    parse_snippet({ trig = "ite", name = "Itemize" }, "\\begin{itemize}\n\t\\item $0\n\\end{itemize}"),
-    parse_snippet({ trig = "enu", name = "Enumerate" }, "\\begin{enumerate}\n\t\\item $0\n\\end{enumerate}"),
+    parse_snippet(
+      { trig = "ite", name = "Itemize" },
+      "\\begin{itemize}\n\t\\item $0\n\\end{itemize}"
+    ),
+    parse_snippet(
+      { trig = "enu", name = "Enumerate" },
+      "\\begin{enumerate}\n\t\\item $0\n\\end{enumerate}"
+    ),
     parse_snippet({ trig = "itm", name = "Item" }, "\\item "),
 
     s({ trig = "bigfun", name = "Big function" }, {
