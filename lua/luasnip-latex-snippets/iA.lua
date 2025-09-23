@@ -11,6 +11,11 @@ function M.retrieve(not_math)
   }) --[[@as function]]
 
   return {
+    parse_snippet({ trig = " lab", name = "label" }, "~\\label{${1:${TM_SELECTED_TEXT}}} $0"),
+    -- parse_snippet({ trig = "lab", name = "label" }, "~\\label{${1:${TM_SELECTED_TEXT}}} $0"),
+    parse_snippet({ trig = " ref", name = "ref" }, "~\\ref{${1:${TM_SELECTED_TEXT}}} $0"),
+    -- parse_snippet({ trig = "ref", name = "ref" }, "~\\ref{${1:${TM_SELECTED_TEXT}}} $0"),
+
     parse_snippet({ trig = "cite", name = "cite" }, "~\\cite{${1:${TM_SELECTED_TEXT}}} $0"),
     parse_snippet({ trig = "citep", name = "citep" }, "~\\citep{${1:${TM_SELECTED_TEXT}}} $0"),
     parse_snippet({ trig = "citet", name = "citet" }, "~\\citet{${1:${TM_SELECTED_TEXT}}} $0"),
