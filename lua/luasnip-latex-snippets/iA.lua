@@ -16,9 +16,9 @@ function M.retrieve(not_math)
     parse_snippet({ trig = " ref", name = "ref" }, "~\\ref{${1:${TM_SELECTED_TEXT}}} $0"),
     -- parse_snippet({ trig = "ref", name = "ref" }, "~\\ref{${1:${TM_SELECTED_TEXT}}} $0"),
     --
-    parse_snippet({ trig = "~\\label{el}", name = "label undo", regTrig = true }, "label"),
+    parse_snippet({ trig = "~\\label{el}", name = "label undo", trigEngine = "pattern" }, "label"),
     -- parse_snippet({ trig = "lab", name = "label" }, "~\\label{${1:${TM_SELECTED_TEXT}}} $0"),
-    parse_snippet({ trig = "~\\ref{er}", name = "ref undo", regTrig = true }, "refer"),
+    parse_snippet({ trig = "~\\ref{er}", name = "ref undo", trigEngine = "pattern" }, "refer"),
 
     parse_snippet({ trig = "cite", name = "cite" }, "~\\cite{${1:${TM_SELECTED_TEXT}}} $0"),
     parse_snippet({ trig = "citep", name = "citep" }, "~\\citep{${1:${TM_SELECTED_TEXT}}} $0"),
