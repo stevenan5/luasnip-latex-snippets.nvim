@@ -66,7 +66,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%s?\\?%w+)vec",
+        trig = "(\\?%w+%s?)vec",
         wordTrig = false,
         regTrig = true,
         name = "vec",
