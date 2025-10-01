@@ -18,7 +18,7 @@ function M.retrieve(is_math)
   return {
     s(
       {
-        trig = "(%w+)tilde",
+        trig = "(\\?%w+%s?)tilde",
         wordTrig = false,
         regTrig = true,
         name = "tilde",
@@ -30,7 +30,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%w+)tt",
+        trig = "(\\?%w+%s?)tt",
         wordTrig = false,
         regTrig = true,
         name = "text",
@@ -42,7 +42,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%w+)ita",
+        trig = "(\\?%w+%s?)ita",
         wordTrig = false,
         regTrig = true,
         name = "italic",
@@ -54,7 +54,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%w+)bol",
+        trig = "(\\?%w+%s?)bol",
         wordTrig = false,
         regTrig = true,
         name = "bold",
@@ -78,7 +78,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%w+)bar",
+        trig = "(\\?%w+%s?)bar",
         wordTrig = false,
         regTrig = true,
         name = "bar",
@@ -90,7 +90,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%w+)und",
+        trig = "(\\?%w+%s?)und",
         wordTrig = false,
         regTrig = true,
         name = "underline",
@@ -102,7 +102,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%w)dot",
+        trig = "(\\?%w+%s?)dot",
         wordTrig = false,
         regTrig = true,
         name = "dot",
@@ -115,7 +115,7 @@ function M.retrieve(is_math)
 
     s(
       {
-        trig = "(%w+)what",
+        trig = "(\\?%w+%s?)what",
         wordTrig = false,
         regTrig = true,
         name = "widehat",
@@ -127,7 +127,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%w+)ora",
+        trig = "(\\?%w+%s?)ora",
         wordTrig = false,
         regTrig = true,
         name = "ora",
@@ -139,7 +139,7 @@ function M.retrieve(is_math)
     ),
     s(
       {
-        trig = "(%w+)ola",
+        trig = "(\\?%w+%s?)ola",
         wordTrig = false,
         regTrig = true,
         name = "ola",
