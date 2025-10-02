@@ -38,7 +38,11 @@ local frac_node = {
     if depth ~= 0 then
       return string.format("%s\\frac{}", stripped)
     else
-      return string.format("%s\\frac{%s}", stripped:sub(1, i - 1), stripped:sub(i + 1, #stripped - 1))
+      return string.format(
+        "%s\\frac{%s}",
+        stripped:sub(1, i - 1),
+        stripped:sub(i + 1, #stripped - 1)
+      )
     end
   end, {}),
   t("{"),
@@ -73,16 +77,16 @@ function M.retrieve(is_math)
   }) --[[@as function]]
 
   local snippets = {
-    s({
-      trig = "([%a])(%d)",
-      name = "auto subscript",
-    }, vim.deepcopy(subscript_node)),
-
-    s({
-      trig = "([%a])_(%d%d)",
-      name = "auto subscript 2",
-    }, vim.deepcopy(subscript_node)),
-
+    -- s({
+    --   trig = "([%a])(%d)",
+    --   name = "auto subscript",
+    -- }, vim.deepcopy(subscript_node)),
+    --
+    -- s({
+    --   trig = "([%a])_(%d%d)",
+    --   name = "auto subscript 2",
+    -- }, vim.deepcopy(subscript_node)),
+    --
     s({
       priority = 1000,
       trig = ".*%)/",
