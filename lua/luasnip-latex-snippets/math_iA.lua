@@ -203,8 +203,8 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "pd", name = "product" }, "\\prod_{${1:i}=${2:1}}^{${3:n}} $0"),
 
     -- parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
-    parse_snippet({ trig = "->", name = "rightarrow", priority = 200 }, "\\rightarrow"),
-    parse_snippet({ trig = "<-", name = "leftarrow", priority = 200 }, "\\leftarrow"),
+    parse_snippet({ trig = "->", name = "rightarrow", priority = 200 }, "\\rightarrow "),
+    parse_snippet({ trig = "<-", name = "leftarrow", priority = 200 }, "\\leftarrow "),
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
     parse_snippet({ trig = "v..", name = "vdots", priority = 100 }, "\\vdots "),
     parse_snippet({ trig = "c..", name = "cdots", priority = 100 }, "\\cdots "),
