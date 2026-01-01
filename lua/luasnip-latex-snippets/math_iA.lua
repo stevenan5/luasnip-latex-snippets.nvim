@@ -202,7 +202,9 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "sum", name = "sum" }, "\\sum_{${1:i}=${2:1}}^{${3:n}} $0"),
     parse_snippet({ trig = "pd", name = "product" }, "\\prod_{${1:i}=${2:1}}^{${3:n}} $0"),
 
-    parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
+    -- parse_snippet({ trig = "<->", name = "leftrightarrow", priority = 200 }, "\\leftrightarrow"),
+    parse_snippet({ trig = "->", name = "rightarrow", priority = 200 }, "\\rightarrow"),
+    parse_snippet({ trig = "<-", name = "leftarrow", priority = 200 }, "\\leftarrow"),
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
     parse_snippet({ trig = "v..", name = "vdots", priority = 100 }, "\\vdots "),
     parse_snippet({ trig = "c..", name = "cdots", priority = 100 }, "\\cdots "),
@@ -218,8 +220,8 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "mcal", name = "mathcal" }, "\\mathcal{$1}$0"),
     parse_snippet({ trig = "//", name = "Fraction" }, "\\frac{$1}{$2}$0"),
     parse_snippet({ trig = "\\\\\\", name = "setminus" }, "\\setminus"),
-    parse_snippet({ trig = "->", name = "to", priority = 100 }, "\\to "),
-    parse_snippet({ trig = "-->", name = "long to", priority = 200 }, "\\longrightarrow "),
+    -- parse_snippet({ trig = "->", name = "to", priority = 100 }, "\\to "),
+    -- parse_snippet({ trig = "-->", name = "long to", priority = 200 }, "\\longrightarrow "),
 
     --parse_snippet({ trig = "letw", name = "let omega" }, "Let $\\Omega \\subset \\C$ be open."),
     parse_snippet({ trig = "nnn", name = "bigcap" }, "\\bigcap_{${1:i \\in ${2: I}}} $0"),
