@@ -241,7 +241,7 @@ function M.retrieve(is_math)
 
     parse_snippet({ trig = "**", name = "cdot", priority = 100 }, "\\cdot "),
 
-    parse_snippet({ trig = ":=", name = "colon equals (lhs defined as rhs)" }, "\\coloneqq "),
+    parse_snippet({ trig = ":e", name = "colon equals (lhs defined as rhs)" }, "\\coloneqq "),
 
     parse_snippet({ trig = "colon", name = "colon" }, "\\colon "),
 
